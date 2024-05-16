@@ -57,3 +57,13 @@ variable "enable_versioning" {
   type        = bool
   default     = false
 }
+
+variable "transition_days" {
+  description = "After how many days do we change the log tier to IA"
+  default = 30
+}
+
+variable "expiration_days" {
+  description = "After how many days do we remove logs"
+  default = 90
+}

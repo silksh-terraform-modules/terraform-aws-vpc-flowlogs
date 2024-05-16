@@ -37,12 +37,12 @@ resource "aws_s3_bucket" "this" {
     enabled = true
 
     transition {
-      days          = 30
+      days          = var.transition_days
       storage_class = "STANDARD_IA"
     }
 
     expiration {
-      days = 60
+      days = var.expiration_days
     }
   }
 
